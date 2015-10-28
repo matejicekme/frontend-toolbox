@@ -10,6 +10,7 @@ Added :
 - Bootstrap 3 SASS
 
 Todo :
+- Adding gulp-file-include for better html templating
 - Better Bower support
 - manifest file for imported assets
 - add command if you want separated CSS / JS files
