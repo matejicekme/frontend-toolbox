@@ -1,0 +1,22 @@
+{
+  "name": "YourProject",
+  "description": "Description of your project",
+  "main": "",
+  "authors": [
+    "Jordan Matejicek <jordan@matejicek.me>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/matejicekme/frontend-toolbox",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}

@@ -1,0 +1,13 @@
+//misc settings
+@import 'config/_settings';
+@import 'config/_mixins';
+
+//frameworks
+	//Bootstrap
+	@import 'config/_bootstrap';
+	@import '../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap';
+
+//global things
+@import 'layout/_main';
+
+//pages
