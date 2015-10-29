@@ -1,5 +1,5 @@
 //initialize all of our variables
-var app, base, concat, directory, gulp, gutil, hostname, path, refresh, sass, uglify, imagemin, minifyCSS, del, browserSync, autoprefixer, gulpSequence, shell, sourceMaps, plumber, filter, mainBowerFiles;
+var app, base, concat, directory, gulp, gutil, hostname, path, refresh, sass, uglify, imagemin, minifyCSS, del, browserSync, autoprefixer, gulpSequence, shell, sourceMaps, plumber, filter, mainBowerFiles, fileinclude;
 
 var autoPrefixBrowserList = ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'];
 
@@ -20,6 +20,7 @@ shell       = require('gulp-shell');
 plumber     = require('gulp-plumber');
 filter 		= require('gulp-filter');
 mainBowerFiles = require ('gulp-main-bower-files');
+fileinclude = require ('gulp-file-include');
 
 gulp.task('browserSync', function() {
     browserSync({
@@ -209,6 +210,10 @@ gulp.task('html', function() {
     //watch any and all HTML files and refresh when something changes
     return gulp.src('app/*.html')
         .pipe(plumber())
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
         .pipe(browserSync.reload({stream: true}))
         //catch errors
         .on('error', gutil.log)
@@ -221,6 +226,10 @@ gulp.task('html-deploy', function() {
     gulp.src('app/*')
         //prevent pipe breaking caused by errors from gulp plugins
         .pipe(plumber())
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
         .pipe(gulp.dest('dist'));
 
     //grab any hidden files too

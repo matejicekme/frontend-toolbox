@@ -1,7 +1,7 @@
 Front end Toolbox
 ==========================
 
-Front-end toolbox, based on harvest (https://github.com/ryanbenson/Harvest).
+Front-end toolbox, based on [harvest](https://github.com/ryanbenson/Harvest).
 Removed :
 - HTML5 Boilerplate
 - normalize
@@ -10,7 +10,6 @@ Added :
 - Bootstrap 3 SASS
 
 Todo :
-- Adding gulp-file-include for better html templating
 - Better Bower support
 - manifest file for imported assets
 - add command if you want separated CSS / JS files
@@ -35,10 +34,13 @@ Everything come from [Harvest](https://github.com/ryanbenson/Harvest) by Ryan Be
 
 Version
 ==========================
-1.0.0
+1.0.1
 
 
 Revision History
 ==========================
+October 29, 2015
+* Added gulp-file-include for better html templating
+
 October 28, 2015
 * First commit
