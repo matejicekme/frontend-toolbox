@@ -285,8 +285,8 @@ gulp.task('scaffold', function() {
 //  compress all scripts and SCSS files
 gulp.task('default', ['browserSync', 'scripts','images','main-bower-files','main-bower-fonts','styles','html','htaccess'], function() {
     //a list of watchers, so it will watch all of the following files waiting for changes
-    gulp.watch('app/scripts/src/**', ['scripts']);
-    gulp.watch('app/styles/scss/**', ['styles']);
+    gulp.watch('app/scripts/**', ['scripts']);
+    gulp.watch('app/styles/**', ['styles']);
     gulp.watch('app/images/**', ['images']);
     gulp.watch('app/.htaccess', ['htaccess']);
     gulp.watch('app/*.html', ['html']);
