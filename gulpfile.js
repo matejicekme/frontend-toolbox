@@ -62,8 +62,6 @@ gulp.task('scripts', function() {
                 .pipe(concat('app.js'))
                 //catch errors
                 .on('error', gutil.log)
-                //compress :D
-                .pipe(uglify())
                 //where we will store our finalized, compressed script
                 .pipe(gulp.dest('dev/scripts'))
                 //notify browserSync to refresh
@@ -290,6 +288,7 @@ gulp.task('default', ['browserSync', 'scripts','images','main-bower-files','main
     gulp.watch('app/images/**', ['images']);
     gulp.watch('app/.htaccess', ['htaccess']);
     gulp.watch('app/*.html', ['html']);
+    gulp.watch('app/templates/**/*.html', ['html']);
 });
 
 //this is our deployment task, it will set everything for deployment-ready files
